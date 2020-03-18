@@ -1,0 +1,71 @@
+header{
+    background-color: darkseagreen;
+}
+nav{
+    background-color: mistyrose;
+
+}
+
+article{
+    background-color: darkgoldenrod;
+}
+
+section{
+    background-color: burlywood;
+}
+
+aside{
+    background-color: mediumvioletred;
+}
+section{
+    background-color: burlywood;
+}
+footer{
+    background-color: palegreen;
+}
+
+nav ul, nav li{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    width: 33%;
+}
+
+html, body{
+    margin: 0;
+}
+
+a{
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+}
+
+a:hover{
+    color: indianred;
+    background-color: saddlebrown;
+}
+
+p{
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.margin
+{
+    margin: 0;
+    padding: 0;
+}
+
+.background
+{
+    background-color: #4e555b;
+}
