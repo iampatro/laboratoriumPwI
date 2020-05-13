@@ -16,11 +16,12 @@
         $user = 'root';
         $password = '';
         $dbname = 'uczelnia';
-    
+        $id = 2;
         $dsn = 'mysql:host='. $host .';dbname='. $dbname;
         $pdo = new PDO($dsn, $user, $password);
-        $sql = 'DELETE FROM studenci WHERE id= 2';
+        $sql = 'DELETE FROM studenci WHERE id =:id';
         $stmt = $pdo -> prepare($sql);
+     $stmt -> execute(['id' => $id]);
 ?>
     
 </body>

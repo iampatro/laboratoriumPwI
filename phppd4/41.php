@@ -15,12 +15,13 @@
         $user = 'root';
         $password = '';
         $dbname = 'uczelnia';
-
+        $id = 3;
+        $nazwisko= "Malinowski";
         $dsn = 'mysql:host='. $host .';dbname='. $dbname;
         $pdo = new PDO($dsn, $user, $password);
-        $sql = 'UPDATE studenci SET nazwisko = :nazwisko where id = 3';
+        $sql = 'UPDATE studenci SET nazwisko = :nazwisko where id = :id';
         $stmt = $pdo -> prepare($sql);
-        $stmt -> execute(['nazwisko' => 'Malinowski']);
+        $stmt -> execute(['nazwisko' => $nazwisko, 'id' => $id]);
         
 ?>
     
