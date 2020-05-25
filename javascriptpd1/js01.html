@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zadanie</title>
+      
+  </head>
+    
+  <body>
+      
+    <input type="text" id="x"/>
+    <input type="text" id="y"/>
+      
+    <button id="oblicz">oblicz</button><br/>
+    <output id="dodawanie"></output><br/>
+    <output id="odejmowanie"></output><br/>
+    <output id="mnozenie"></output><br/>
+    <output id="dzielenie"></output><br/>
+
+    <script type="text/javascript">
+      function calc(){
+        const x =document.getElementById("x");
+        const y =document.getElementById("y");
+        const wyniki ={
+          dodawanie: Number(x.value)+Number(y.value),
+          odejmowanie: Number(x.value)-Number(y.value),
+          mnozenie: Number(x.value)*Number(y.value),
+          dzielenie:
+            Number(y.value) ===0
+              ? "Nie dzielim,y przez 0"
+              : Number(x.value)/Number(y.value),
+        };
+        const dodawanie = document.getElementById("dodawanie");
+        dodawanie.innerHTML = wyniki.dodawanie;
+        const odejmowanie = document.getElementById("odejmowanie");
+        odejmowanie.innerHTML = wyniki.odejmowanie;
+        const mnozenie = document.getElementById("mnozenie");
+        mnozenie.innerHTML = wyniki.mnozenie;
+        const dzielenie = document.getElementById("dzielenie");
+        dzielenie.innerHTML = wyniki.dzielenie;
+      }
+      const oblicz = document.getElementById("oblicz");
+      oblicz.addEventListener("click",calc);
+        
+    </script>
+      
+  </body>
+    
+</html>

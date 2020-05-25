@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zadanie</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+    
+  <body>
+      
+    <input type="text" id="x"/>
+    <input type="text" id="y"/>
+      
+    <select id="single">
+        
+      <option>dodawanie</option>
+      <option>odejmowanie</option>
+      <option>mnozenie</option>
+      <option>dzielenie</option>
+        
+    </select>
+      
+    <button id="oblicz">oblicz</button><br/>
+
+    <output id="wynik"></output>
+
+    <script>
+        
+      function calc() {
+        const x =document.getElementById("x");
+        const y =document.getElementById("y");
+        let result;
+          
+        if ($("#single").val()==="dodawanie"){
+          result =Number(x.value)+Number(y.value);
+            
+        }
+          else if ($("#single").val()==="odejmowanie"){
+          result =Number(x.value)-Number(y.value);
+            
+        }
+          else if ($("#single").val()==="mnozenie"){
+          result =Number(x.value)*Number(y.value);
+            
+        }
+          else{
+          Number(y.value)===0
+            ? (result = "Nie dzielim,y przez 0")
+            : (result = Number(x.value)/Number(y.value));
+        }
+          
+        const wynik=document.getElementById("wynik");
+        wynik.innerHTML=result;
+      }
+      const oblicz=document.getElementById("oblicz");
+      oblicz.addEventListener("click",calc);
+        
+    </script>
+      
+  </body>
+    
+</html>

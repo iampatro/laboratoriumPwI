@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zadanie</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+    
+  <body>
+      
+    <div id="kom">To jest tekst</div>
+    <a href="#" id="pokaz">pokaz</a>
+    <a href="#" id="schowaj">schowaj</a>
+
+
+    <script>
+        
+      $("#pokaz").click(function(){
+        $("#kom").slideDown("slow",function(){});
+      }); 
+        
+      $("#schowaj").click(function(){
+        $("#kom").slideUp("slow",function(){});
+      });
+
+        
+    </script>
+      
+  </body>
+    
+</html>
